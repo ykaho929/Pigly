@@ -33,3 +33,10 @@ php artisan db:seed
 ## 使用技術(実行環境)
 * PHP8.3.8  
 * Laravel8.83.8  
+
+## ER図  
+  
+
+## URL  
+* 開発環境：http://localhost/  
+* phpMyAdmin：http://localhost:8080/
