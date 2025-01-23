@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +13,11 @@ use App\Http\Controllers\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::middleware('guest')->group(function () {
+    Route::get('register/step1', [RegisteredUserController::class, 'create'])
+    ->name('register');
+    Route::post('register/step1', [RegisteredUserController::class, 'storeStep1']);
+    Route::get('register/step2', [RegisteredUserController::class, 'step2'])
+    ->name('register.step2');
+    Route::post('register/step2', [RegisteredUserController::class, 'storeStep2']); 
 });
-Route::get('/weight_logs',[UserController::class,'index']);
-
-
