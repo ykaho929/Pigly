@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/wight_logs.css') }}">
+<link rel="stylesheet" href="{{ asset('css/goal_setting.css') }}">
 @endsection
 
 @section('content')

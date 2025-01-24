@@ -8,8 +8,11 @@ class UserController extends Controller
 {
     public function index()
     {
-    return view('weight_logs');
+        return view('weight_logs');
     }
 
-
+    public function store()
+    {
+        return view('goal_setting');
+    }
 }
