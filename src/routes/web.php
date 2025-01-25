@@ -18,6 +18,13 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/weight_logs',[UserController::class,'index']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/weight_logs', [UserController::class, 'index']);
+    
+});
+
 Route::post('/wight_logs/goal_setting',[UserController::class,'store']);
+
+
 
