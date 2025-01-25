@@ -15,4 +15,10 @@ class UserController extends Controller
     {
         return view('goal_setting');
     }
+
+    public function update()
+    {
+
+        return view('weight_logs'); 
+    }
 }

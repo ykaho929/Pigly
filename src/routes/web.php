@@ -26,5 +26,6 @@ Route::middleware('auth')->group(function () {
 
 Route::post('/wight_logs/goal_setting',[UserController::class,'store']);
 
-
+Route::post('/weight_logs/{weightLog}/update', [UserController::class, 'update'])
+    ->name('weight.update');
 
