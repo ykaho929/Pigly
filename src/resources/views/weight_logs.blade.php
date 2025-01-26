@@ -8,11 +8,13 @@
 
 <main>
     <div class="weight_logs__content">
-        
+           @isset($weight_logs)
+           @foreach($weightLogs as $weightLog)
         <table class="weight__nav">
+            
             <th class="weight_logs__content-nav">
                 <div class="nav__target-tag">目標体重</div>
-                <div class="nav__target-weight">kg</div>
+                <div class="nav__target-weight">{{ $weightLog->weightTarget->target_weight }}kg</div>
             </th>
             <th class="weight_logs__content-nav">
                 <div class="nav__gap-tag">目標まで</div>
@@ -20,7 +22,7 @@
             </th>
             <th class="weight_logs__content-nav">
                 <div class="nav__latest-tag">最新体重</div>
-                <div class="nav__latest-weight">kg</div>
+                <div class="nav__latest-weight">{{$weightLogs->weight}}kg</div>
             </th>
         </table>
        
@@ -35,8 +37,6 @@
             </form>
         </div>
 
-        @isset($weight_logs)
-        @foreach($weight_logs as $weightLog)
         <div class="weight_logs__inner">
             <div class="modal" id="">
                 <a href="#!" class="modal-overlay">データ追加</a>

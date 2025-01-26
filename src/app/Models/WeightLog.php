@@ -17,5 +17,10 @@ class WeightLog extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function weightTarget()
+    {
+        return $this->belongsTo(WeightTarget::class);
+    }
     
 }
