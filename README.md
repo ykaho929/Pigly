@@ -38,5 +38,5 @@ php artisan db:seed
 ![Image](https://github.com/user-attachments/assets/7c736281-0127-41c6-87b0-4bdefce68e50)  
 
 ## URL  
-* 開発環境：http://localhost/  
+* 開発環境：http://localhost/login  
 * phpMyAdmin：http://localhost:8080/
